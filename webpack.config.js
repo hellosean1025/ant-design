@@ -134,6 +134,4 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
   processWebpackThemeConfig(webpackCompactConfig, 'compact', compactVars);
 }
 
-console.log(webpackConfig);
-process.exit(1);
 module.exports = [...webpackConfig, ...webpackDarkConfig, ...webpackCompactConfig];
