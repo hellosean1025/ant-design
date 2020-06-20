@@ -20,15 +20,15 @@ const { RangePicker } = DatePicker;
 
 ReactDOM.render(
   <>
-    <RangePicker />
+    <RangePicker enableSelectTwiceWhenClickLeft={true} />
     <br />
-    <RangePicker showTime />
+    <RangePicker enableSelectTwiceWhenClickLeft={true} showTime />
     <br />
-    <RangePicker picker="week" />
+    <RangePicker enableSelectTwiceWhenClickLeft={true} picker="week" />
     <br />
-    <RangePicker picker="month" />
+    <RangePicker enableSelectTwiceWhenClickLeft={true} picker="month" />
     <br />
-    <RangePicker picker="year" />
+    <RangePicker enableSelectTwiceWhenClickLeft={true} picker="year" />
   </>,
   mountNode,
 );

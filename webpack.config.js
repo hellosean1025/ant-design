@@ -35,6 +35,10 @@ function externalMoment(config) {
   };
 }
 
+function alias(config) {
+  config.resolve.alias['rc-picker'] = 'sean-rc-picker';
+}
+
 function injectWarningCondition(config) {
   config.module.rules.forEach(rule => {
     // Remove devWarning if needed
@@ -100,6 +104,7 @@ const webpackCompactConfig = getWebpackConfig(false);
 
 webpackConfig.forEach(config => {
   injectWarningCondition(config);
+  alias(config);
 });
 
 if (process.env.RUN_ENV === 'PRODUCTION') {
@@ -129,4 +134,6 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
   processWebpackThemeConfig(webpackCompactConfig, 'compact', compactVars);
 }
 
+console.log(webpackConfig);
+process.exit(1);
 module.exports = [...webpackConfig, ...webpackDarkConfig, ...webpackCompactConfig];

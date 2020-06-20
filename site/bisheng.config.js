@@ -106,7 +106,7 @@ module.exports = {
         antdReproduceVersion: JSON.stringify(version),
       }),
     );
-
+    config.resolve.alias['rc-picker'] = 'sean-rc-picker';
     delete config.module.noParse;
 
     return config;
